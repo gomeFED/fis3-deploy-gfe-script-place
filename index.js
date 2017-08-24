@@ -22,7 +22,7 @@ module.exports = function(options, modified, total, next) {
             var isEntryFile = (~content.indexOf('/html') || ~content.indexOf('/HTML')) && (~content.indexOf('/head') || ~content.indexOf('/HEAD')) && (~content.indexOf('/body') || ~content.indexOf('/BODY'));
 
             //html入口文件
-            if (/\.(html|ftl)/.test(file.rExt) && isEntryFile) {
+            if (/\.(html|ftl|tpl)/.test(file.rExt) && isEntryFile) {
                 //inbottom script标签数组
                 var inbottomScriptTagArray = [];
 
